@@ -5,7 +5,7 @@ Lets consider data flow through controllers, services and repositories for GetPo
 
 Controllers (Presentation Layer) → Services (Business Logic Layer)
 
-// AuthorController
+   // PostController
    [HttpGet("{id}")]
    public IActionResult GetById(int id) =>
       _postService.GetById(id);
