@@ -24,5 +24,4 @@ Controllers (Presentation Layer) → Services (Business Logic Layer)
    
    // PostRepository
    
-   public Post GetById(int id) =>_context.Set<Post>().Find(Id);
 ![image](https://user-images.githubusercontent.com/80188633/167249670-d26aaddf-dc61-43f2-be58-14d1d41ab681.png)
