@@ -17,8 +17,9 @@ Controllers (Presentation Layer) → Services (Business Logic Layer)
    // PostService
    
    public PostVM GetById(int id) =>
-      _unitOfWork.Posts.GetById(id); //Posts = IPostRepository
+      _unitOfWork.Posts.GetById(id); 
       
+   //Posts = IPostRepository      
    Repositories (Data Access Layer) → Database Context (Database)
    
    // PostRepository
