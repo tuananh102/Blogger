@@ -1,4 +1,4 @@
-﻿using Blogger.BLL.ViewModels;
+﻿using Blogger.BLL.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +9,10 @@ namespace Blogger.BLL.Services
 {
     public interface IPostService
     {
-        IEnumerable<PostVM> GetAll();
-        PostVM GetById(int id);
-        void Create(PostVM postVM);
-        void Update(int id, PostVM postVM);
+        Task<IEnumerable<PostDto>> GetAllAsync();
+        Task<PostDto> GetByIdAsync(int id);
+        Task Create(PostDto postDto);
+        Task Update(PostDto postDto);
         Task Delete(int id);
     }
 }

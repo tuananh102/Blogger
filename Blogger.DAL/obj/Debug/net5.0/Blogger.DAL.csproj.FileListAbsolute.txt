@@ -1,0 +1,15 @@
+E:\OneDrive\Workspace\Blogger\Blogger.DAL\bin\Debug\net5.0\Blogger.DAL.deps.json
+E:\OneDrive\Workspace\Blogger\Blogger.DAL\bin\Debug\net5.0\Blogger.DAL.runtimeconfig.json
+E:\OneDrive\Workspace\Blogger\Blogger.DAL\bin\Debug\net5.0\Blogger.DAL.runtimeconfig.dev.json
+E:\OneDrive\Workspace\Blogger\Blogger.DAL\bin\Debug\net5.0\Blogger.DAL.dll
+E:\OneDrive\Workspace\Blogger\Blogger.DAL\bin\Debug\net5.0\Blogger.DAL.pdb
+E:\OneDrive\Workspace\Blogger\Blogger.DAL\obj\Debug\net5.0\Blogger.DAL.csproj.AssemblyReference.cache
+E:\OneDrive\Workspace\Blogger\Blogger.DAL\obj\Debug\net5.0\Blogger.DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\OneDrive\Workspace\Blogger\Blogger.DAL\obj\Debug\net5.0\Blogger.DAL.AssemblyInfoInputs.cache
+E:\OneDrive\Workspace\Blogger\Blogger.DAL\obj\Debug\net5.0\Blogger.DAL.AssemblyInfo.cs
+E:\OneDrive\Workspace\Blogger\Blogger.DAL\obj\Debug\net5.0\Blogger.DAL.csproj.CoreCompileInputs.cache
+E:\OneDrive\Workspace\Blogger\Blogger.DAL\obj\Debug\net5.0\Blogger.DAL.dll
+E:\OneDrive\Workspace\Blogger\Blogger.DAL\obj\Debug\net5.0\refint\Blogger.DAL.dll
+E:\OneDrive\Workspace\Blogger\Blogger.DAL\obj\Debug\net5.0\Blogger.DAL.pdb
+E:\OneDrive\Workspace\Blogger\Blogger.DAL\obj\Debug\net5.0\Blogger.DAL.genruntimeconfig.cache
+E:\OneDrive\Workspace\Blogger\Blogger.DAL\obj\Debug\net5.0\ref\Blogger.DAL.dll

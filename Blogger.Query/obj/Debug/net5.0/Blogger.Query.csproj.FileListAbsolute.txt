@@ -1,0 +1,12 @@
+E:\OneDrive\Workspace\Blogger\Blogger.Query\bin\Debug\net5.0\Blogger.Query.deps.json
+E:\OneDrive\Workspace\Blogger\Blogger.Query\bin\Debug\net5.0\Blogger.Query.dll
+E:\OneDrive\Workspace\Blogger\Blogger.Query\bin\Debug\net5.0\Blogger.Query.pdb
+E:\OneDrive\Workspace\Blogger\Blogger.Query\obj\Debug\net5.0\Blogger.Query.csproj.AssemblyReference.cache
+E:\OneDrive\Workspace\Blogger\Blogger.Query\obj\Debug\net5.0\Blogger.Query.GeneratedMSBuildEditorConfig.editorconfig
+E:\OneDrive\Workspace\Blogger\Blogger.Query\obj\Debug\net5.0\Blogger.Query.AssemblyInfoInputs.cache
+E:\OneDrive\Workspace\Blogger\Blogger.Query\obj\Debug\net5.0\Blogger.Query.AssemblyInfo.cs
+E:\OneDrive\Workspace\Blogger\Blogger.Query\obj\Debug\net5.0\Blogger.Query.csproj.CoreCompileInputs.cache
+E:\OneDrive\Workspace\Blogger\Blogger.Query\obj\Debug\net5.0\Blogger.Query.dll
+E:\OneDrive\Workspace\Blogger\Blogger.Query\obj\Debug\net5.0\refint\Blogger.Query.dll
+E:\OneDrive\Workspace\Blogger\Blogger.Query\obj\Debug\net5.0\Blogger.Query.pdb
+E:\OneDrive\Workspace\Blogger\Blogger.Query\obj\Debug\net5.0\ref\Blogger.Query.dll

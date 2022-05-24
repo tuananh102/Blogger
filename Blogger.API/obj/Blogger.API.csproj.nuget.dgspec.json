@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.API\\Blogger.API.csproj": {}
+    "E:\\OneDrive\\Workspace\\Blogger\\Blogger.API\\Blogger.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.API\\Blogger.API.csproj": {
+    "E:\\OneDrive\\Workspace\\Blogger\\Blogger.API\\Blogger.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.API\\Blogger.API.csproj",
+        "projectUniqueName": "E:\\OneDrive\\Workspace\\Blogger\\Blogger.API\\Blogger.API.csproj",
         "projectName": "Blogger.API",
-        "projectPath": "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.API\\Blogger.API.csproj",
-        "packagesPath": "C:\\Users\\trann\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.API\\obj\\",
+        "projectPath": "E:\\OneDrive\\Workspace\\Blogger\\Blogger.API\\Blogger.API.csproj",
+        "packagesPath": "C:\\Users\\anhtnt6\\.nuget\\packages\\",
+        "outputPath": "E:\\OneDrive\\Workspace\\Blogger\\Blogger.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\trann\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anhtnt6\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\Blogger.BLL.csproj": {
-                "projectPath": "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\Blogger.BLL.csproj"
+              "E:\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\Blogger.BLL.csproj": {
+                "projectPath": "E:\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\Blogger.BLL.csproj"
               }
             }
           }
@@ -47,6 +47,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -81,17 +85,17 @@
         }
       }
     },
-    "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\Blogger.BLL.csproj": {
+    "E:\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\Blogger.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\Blogger.BLL.csproj",
+        "projectUniqueName": "E:\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\Blogger.BLL.csproj",
         "projectName": "Blogger.BLL",
-        "projectPath": "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\Blogger.BLL.csproj",
-        "packagesPath": "C:\\Users\\trann\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\obj\\",
+        "projectPath": "E:\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\Blogger.BLL.csproj",
+        "packagesPath": "C:\\Users\\anhtnt6\\.nuget\\packages\\",
+        "outputPath": "E:\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\trann\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anhtnt6\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,8 +109,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\Blogger.DAL.csproj": {
-                "projectPath": "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\Blogger.DAL.csproj"
+              "E:\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\Blogger.DAL.csproj": {
+                "projectPath": "E:\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\Blogger.DAL.csproj"
               }
             }
           }
@@ -145,17 +149,17 @@
         }
       }
     },
-    "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\Blogger.DAL.csproj": {
+    "E:\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\Blogger.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\Blogger.DAL.csproj",
+        "projectUniqueName": "E:\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\Blogger.DAL.csproj",
         "projectName": "Blogger.DAL",
-        "projectPath": "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\Blogger.DAL.csproj",
-        "packagesPath": "C:\\Users\\trann\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\obj\\",
+        "projectPath": "E:\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\Blogger.DAL.csproj",
+        "packagesPath": "C:\\Users\\anhtnt6\\.nuget\\packages\\",
+        "outputPath": "E:\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\trann\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anhtnt6\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

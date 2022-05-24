@@ -1,6 +1,7 @@
 using Blogger.BLL.Configurations;
+using Blogger.BLL.Extensions;
 using Blogger.DAL.Models;
-using Blogger_BE.Configurations;
+using Blogger_BE.Extensions;
 using Blogger_BE.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -34,36 +35,65 @@ namespace Blogger_BE
         {
 
             //Initiate resolving dependecies
-            Dependencies.AddDependencies(services);
-            
+            ServiceExtensions.ConfigureRepositories(services);
+
+            ServiceExtensions.ConfigureServices(services);
+
             //Connect to Database using EF Core with SQL Server
             services.AddDbContext<AppDbContext>(options =>
             {
                 //CVPANHTNT6-59
                 options.UseSqlServer(Configuration.GetConnectionString("Blogger"));
             });
+
             services.AddControllers();
 
-            services.AddAutoMapper(typeof(Startup));
-
-
-            
-            
+            services.AddAutoMapper(typeof(MapperInitilizer));
+            services.AddAutoMapper(typeof(MapperWithDTOs));
 
             //Config identity
-            services.AddIdentity<AppUser, IdentityRole>(options =>
-            {
-                // Configure User.
-                options.User.AllowedUserNameCharacters =
-                    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
-                // Email is unique
-                options.User.RequireUniqueEmail = true;
-            }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+            IdentityConfig.Initializer(services);
+
+            //Add authentication
+            IdentityConfig.AddAuthentication(services, Configuration);
+
+            //TODO: Authorization
+
+            //services.AddAuthorization(options =>
+            //{
+            //    options.AddPolicy("RequireAdministratorRole",
+            //         policy => policy.RequireRole(UserRoles.Admin));
+            //});
 
             //Swagger
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Blogger_BE", Version = "v1" });
+                c.AddSecurityDefinition(name: "Bearer", securityScheme: new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Description = "Enter the Bearer Authorization string as following: `Bearer Generated-JWT-Token`",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Name = "Bearer",
+                            In = ParameterLocation.Header,
+                            Reference = new OpenApiReference
+                            {
+                                Id = "Bearer",
+                                Type = ReferenceType.SecurityScheme
+                            }
+                        },
+                        new List<string>()
+                    }
+                });
             });
         }
 
@@ -80,6 +110,7 @@ namespace Blogger_BE
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

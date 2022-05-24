@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Blogger.DAL.Repositories
 {
-    public interface IUnitOfWork 
+    public interface IUnitOfWork : IDisposable
     {
-        IPostRepository Posts { get; }
+        //IPostRepository Posts { get; }
+        //ICategoryRepository Categories { get; }
         void Commit();
+        Task CommitAsync();
     }
 }

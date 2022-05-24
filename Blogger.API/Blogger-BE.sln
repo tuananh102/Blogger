@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogger.BLL", "..\Blogger.B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blogger.DAL", "..\Blogger.DAL\Blogger.DAL.csproj", "{1CA2AAAF-53F0-4993-BDEF-5CC44073B336}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopee_KLTN", "D:\Workspace\KLTN\Shopee_KLTN.csproj", "{D009BEB1-B807-4149-A95B-794B37699301}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1CA2AAAF-53F0-4993-BDEF-5CC44073B336}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CA2AAAF-53F0-4993-BDEF-5CC44073B336}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CA2AAAF-53F0-4993-BDEF-5CC44073B336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D009BEB1-B807-4149-A95B-794B37699301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D009BEB1-B807-4149-A95B-794B37699301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D009BEB1-B807-4149-A95B-794B37699301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D009BEB1-B807-4149-A95B-794B37699301}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

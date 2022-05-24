@@ -10,15 +10,12 @@ namespace Blogger.DAL.Repositories.Implementations
     public class UnitOfWork : IUnitOfWork
     {
         private readonly AppDbContext _context;
-        public IPostRepository Posts { get; }
-
-
-        public UnitOfWork(AppDbContext context,
-            IPostRepository postRepository)
+        public UnitOfWork(AppDbContext context)
         {
             _context = context;
 
-            Posts = postRepository;
+            //Posts = postRepository;
+            //Categories = categoryRepository;
         }
 
         #region IUnitOfWork Members
@@ -35,7 +32,17 @@ namespace Blogger.DAL.Repositories.Implementations
         /// </summary>
         public void Dispose()
         {
+            GC.SuppressFinalize(this);
             _context.Dispose();
+        }
+
+        /// <summary>
+        /// Save all changes async
+        /// </summary>
+        /// <returns></returns>
+        public async Task CommitAsync()
+        {
+            await _context.SaveChangesAsync();
         }
         #endregion
     }

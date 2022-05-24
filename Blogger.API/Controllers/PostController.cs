@@ -1,10 +1,14 @@
-﻿using Blogger.BLL.Services;
-using Blogger.BLL.ViewModels;
+﻿using AutoMapper;
+using Blogger.BLL.DTOs;
+using Blogger.BLL.Responses;
+using Blogger.BLL.Services;
+using Blogger.DAL.Models;
+using Blogger_BE.Requests;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using System.Threading.Tasks;
 
 namespace Blogger_BE.Controllers
 {
@@ -13,63 +17,113 @@ namespace Blogger_BE.Controllers
     public class PostController : ControllerBase
     {
         private readonly IPostService _postService;
-        public PostController(IPostService postService)
+        private readonly IMapper _mapper;
+
+
+        public PostController(IPostService postService,
+            IMapper mapper)
         {
             _postService = postService;
+            _mapper = mapper;
         }
+
+
         // GET: api/<PostController>
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<ActionResult<PostResponse>> GetAll()
         {
-            var result = _postService.GetAll();
-            if(result == null)
-                return NotFound();
-            return Ok(result);
+            try
+            {
+                var list = await _postService.GetAllAsync();
+                return Ok(new ListPostResponse
+                {
+                    IsSuccess = true,
+                    Data = list,
+                });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new Response
+                {
+                    IsSuccess = false,
+                    Error = ex.Message,
+                });
+            }
+
         }
 
         // GET api/<PostController>/5
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<ActionResult<PostResponse>> Get(int id)
         {
-            var result = _postService.GetById(id);
+            var result = await _postService.GetByIdAsync(id);
+
+            //Handle exceptions
             if (result == null)
-                return NotFound();
-            return Ok(result);
+            {
+                return NotFound(new Response
+                {
+                    IsSuccess = false,
+                    Error = $"Not found item with id: {id}",
+                });
+            }
+
+            return Ok(new PostResponse
+            {
+                IsSuccess = true,
+                Data = result
+            });
         }
 
         // POST api/<PostController>
         [HttpPost]
-        public IActionResult Post([FromBody] PostVM postVM)
+        public async Task<ActionResult<Response>> Post([FromBody] PostRequest postRequest)
         {
-            if (postVM == null)
-                return BadRequest();
             try
             {
-                _postService.Create(postVM);
-                return Ok(postVM);
+                await _postService.Create(_mapper.Map<PostDto>(postRequest));
+                return Ok(new Response
+                {
+                    IsSuccess = true,
+                    Message = "Added successfully"
+                });
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                return BadRequest(ex);
+                return BadRequest(ex.Message);
             }
         }
 
         // PUT api/<PostController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] PostVM postVM)
+        [HttpPut]
+        public async Task<ActionResult<Response>> Put([FromBody] PostRequest postRequest)
         {
-            _postService.Update(id, postVM);
+            try
+            {
+                await _postService.Update(_mapper.Map<PostDto>(postRequest));
+                return Ok(new Response
+                {
+                    IsSuccess = true,
+                    Message = "Updated successfully",
+
+                });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         // DELETE api/<PostController>/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public ActionResult<Response> Delete(int id)
         {
-            var post = _postService.GetById(id);
-            if (post == null)
-                return BadRequest();
             _postService.Delete(id);
-            return Ok();
+            return Ok(new Response
+            {
+                IsSuccess = true,
+                Message = "Deleted successfully"
+            });
         }
     }
 }

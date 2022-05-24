@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Blogger.DAL.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -25,6 +26,7 @@ namespace Blogger_BE.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles =UserRoles.Admin)]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();

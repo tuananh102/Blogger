@@ -5904,19 +5904,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\trann\\.nuget\\packages\\": {}
+    "C:\\Users\\anhtnt6\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\Blogger.BLL.csproj",
+      "projectUniqueName": "E:\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\Blogger.BLL.csproj",
       "projectName": "Blogger.BLL",
-      "projectPath": "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\Blogger.BLL.csproj",
-      "packagesPath": "C:\\Users\\trann\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\obj\\",
+      "projectPath": "E:\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\Blogger.BLL.csproj",
+      "packagesPath": "C:\\Users\\anhtnt6\\.nuget\\packages\\",
+      "outputPath": "E:\\OneDrive\\Workspace\\Blogger\\Blogger.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\trann\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\anhtnt6\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5930,8 +5930,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\Blogger.DAL.csproj": {
-              "projectPath": "C:\\Users\\trann\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\Blogger.DAL.csproj"
+            "E:\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\Blogger.DAL.csproj": {
+              "projectPath": "E:\\OneDrive\\Workspace\\Blogger\\Blogger.DAL\\Blogger.DAL.csproj"
             }
           }
         }
